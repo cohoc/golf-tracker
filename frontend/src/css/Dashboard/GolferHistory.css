@@ -1,0 +1,74 @@
+.golfer-history-container{
+    width: 100%;
+    margin-bottom: 18px;
+    font-family: var(--font-style-os);
+    background: rgb(255,255,255);
+    border-radius: 5px;
+    border: var(--dash-items-border);
+}
+
+.golfer-history-header{
+    width: 100%;
+    height: 75px;
+    padding: 0px 16px;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-heading-1);
+    font-weight: bold;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    background: var(--color-theme-1);
+    color: white;
+    border-bottom: 1px solid hsla(125, 56%, 55%, 0.500);
+}
+
+.golfer-history-table{
+    display: table;
+    width: 100%;
+    background: rgb(250, 250, 250);
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.golfer-table-header{
+    display: table-row;
+    border-bottom: 2.5px solid hsl(125, 56%, 55%);
+    width: 100%;
+    height: 35px;
+    font-size: 1em;
+}
+
+.golfer-table-header div{
+    display: table-cell;
+    padding: 0rem 1rem;
+    font-weight: 600;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.golfer-history-row{
+    display: table-row;
+    width: 100%;
+    height: 35px;
+    font-size: .8em;
+}
+
+.golfer-history-row div{
+    display: table-cell;
+    padding: 0rem 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: black;
+    vertical-align: middle;
+
+}
+
+.golfer-history-row:nth-child(even){
+    background-color: rgb(210, 210, 210);
+}
+
+.golfer-history-row:hover {
+    transition: background .25s ease;
+    background: hsla(125, 56%, 55%, .55); 
+}

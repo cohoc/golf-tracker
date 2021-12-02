@@ -1,0 +1,32 @@
+.scores-container{
+    width: 100%;
+    margin-bottom: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.scores-item{
+    width: 300px;
+    height: 150px;
+    margin: 1%;
+    padding: 10px;
+    background: rgb(255,255,255);
+    border: var(--dash-items-border);
+    border-radius: 5px;
+}
+
+.score-title{
+    color: var(--color-lg);
+    font-size: 1.5em;
+}
+
+.item-value{
+    height: 70%;
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}

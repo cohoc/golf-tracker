@@ -1,0 +1,296 @@
+input[type='number']:focus::placeholder{
+    color: transparent;
+}
+
+.backdrop{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.2);
+
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(400px, 80%, 620px);
+    height: 70vh;
+    background: rgb(255,255,255);
+    font-family: var(--font-style-la);
+}
+
+.form-header{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--green-lighter);
+}
+
+.form-label{
+    display: block;
+    min-width: 60px;
+    margin-right: 2vw;
+}
+
+.form-img {
+    display: none;
+}
+
+.form-required{
+    visibility: visible;
+    color: rgba(255, 60, 60, .8);
+    font-size: 1em;
+}
+
+.img-active{
+    display: block;
+}
+
+.img-warning{
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+    height: 1em;
+    width: 1em;
+}
+
+.form-heading{
+    margin: 10px 0px;
+}
+
+.form-input-fields{
+    display: flex;
+    width: 80%;
+    height: 72.5%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form-result-fields{
+    display: flex;
+    width: 80%;
+    height: 72.5%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form-preview-container{
+    width: 100%;
+    padding: 1.2rem;
+    background: rgb(247, 247, 247);
+    border-radius: 2.5%;
+    border: 1px solid rgba(0,0,0,.15);
+
+}
+
+.form-preview{
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-item{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-preview li{
+    color: black;
+}
+
+.form-date-container input{
+    margin-top: 5px;
+}
+
+.form-input-container{
+    width: 100%;
+}
+
+.form-input-container select{
+    cursor: pointer;
+}
+
+.form-location-container input{
+    margin-top: 5px;
+}
+
+.form-scores-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.total-score-container input[type='number']{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.total-score-container 
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button,
+
+.alt-scores-container 
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.alt-scores-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.alt-input{
+    display: block;
+    width: 100%;
+    height: 25px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 5px;
+    padding: 0px 5px;
+    margin-top: 10px;
+    cursor: text;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.button-toggle{
+    padding: 8px 10px;
+    flex: 1 1 33.33%;
+    border: 1px solid rgba(0,0,0,.2);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.button-toggle:first-child{
+    border-radius: 5px 0px 0px 5px;
+    border-right: none;
+}
+.button-toggle:last-child{
+    border-radius: 0px 5px 5px 0px;
+    border-left: none;
+}
+
+.form-shots-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.shot-type-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.golf-shot{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: clamp(150px, 45%, 300px);
+    margin-top: 1.25vw;
+}
+
+
+
+.golf-shot input{
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+
+.golf-shot input[type="number"]::-webkit-inner-spin-button,
+.golf-shot input[type="number"]::-webkit-outer-spin-button{
+    height: 25px;
+}
+
+.form-submit-container{
+    width: 80%;
+    height: 75px;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active{
+    color: white;
+    background: var(--green-lighter);
+    border: 1px solid var(--green-lighter);
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.form-divider{
+    width: 100%;
+    height: 1px;
+    background: rgba(0,0,0,.15);
+    margin: 5px 0px;
+}
+
+#form-cancel{
+    width: 75px;
+    height: 40px;
+    color: white;
+    background: var(--green-lighter);
+}
+
+#form-submit{
+    width: 75px;
+    height: 40px;
+    margin-left: 2vw;
+    color: white;
+    background: var(--green-lighter);
+}
+
+#form-next-page{
+    width: 75px;
+    height: 40px;
+    margin-left: 2vw;
+    border: 2px solid rgb(100, 100, 100);
+    color: black;
+}
+
+#form-prev-page{
+    width: 75px;
+    height: 40px;
+    border: 2px solid rgb(100, 100, 100);
+    color: black;
+}
+
+#golfscore{
+    border: 1px solid rgba(0,0,0,.2);
+}
+
+#golflocation{
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 5%;
+}
+
+#golfcart{
+    transform: scaleX(-1);
+}
+

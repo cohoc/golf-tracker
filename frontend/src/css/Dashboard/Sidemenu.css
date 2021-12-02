@@ -1,0 +1,96 @@
+.sidemenu-container{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    min-width: 280px;
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(125, 56%, 55%);
+    transition: all 350ms ease-in;
+}
+
+.user-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100px;
+    color: white;
+}
+
+#divider{
+    width: 80%;
+    height: 1px;
+    margin: 10px 0px;
+    border-bottom: 2px solid rgba(255,255,255,.75);
+    border-radius: 2px;
+}
+
+.nav-items-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: space-between;
+}
+
+.nav-list-item{
+    margin: 10px 0px;
+}
+
+.nav-list-item a:hover{
+    transition: background 250ms ease;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.nav-list-item a{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 600;
+    width: 100%;
+    height: 50px;
+}
+
+.nav-list-item a::after{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 75%;
+    top: 15%;
+    right: 0; 
+    background: white;
+    transform: scale(1, 0);
+    transition: transform 250ms ease;
+}
+
+.nav-list-item a:hover::after{
+    transform: scale(1, 1);
+} 
+
+.list-item-logo{
+    width:50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nav-settings{
+    display: flex;
+    justify-self: flex-end;
+    justify-content: center;
+    margin-top: auto;
+    height: 100px;
+}
+
+.toggle{
+    margin-left: -280px;
+    transform: translateX(-100%);
+    transition: all 350ms ease-in-out;
+}
