@@ -2,7 +2,9 @@ import React from 'react'
 import {ReactComponent as CalendarIcon} from './calendar.svg'
 import {ReactComponent as ChartIcon} from './chart.svg'
 import {ReactComponent as DashIcon} from './dashboard.svg'
+import {ReactComponent as DeleteIcon} from './trash.svg'
 import {ReactComponent as Desktop} from './desktop.svg'
+import {ReactComponent as EditIcon} from './edit.svg'
 import {ReactComponent as FlagIcon} from './flag.svg'
 import {ReactComponent as GolfBall} from './golfball.svg'
 import {ReactComponent as GolfHole} from './golfholealt.svg'
@@ -16,7 +18,9 @@ const iconType = {
     calendar: CalendarIcon,
     chart: ChartIcon,
     dashboard: DashIcon,
+    delete: DeleteIcon,
     desktop: Desktop,
+    edit: EditIcon,
     flag: FlagIcon,
     golfball: GolfBall,
     golfhole: GolfHole,

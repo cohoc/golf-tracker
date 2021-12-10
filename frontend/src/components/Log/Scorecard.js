@@ -1,12 +1,49 @@
 import '../../css/Log/Scorecard.css'
-import React from 'react'
+import React, {useState} from 'react'
+import {useHistory} from 'react-router-dom'
+import Icon from '../../assets/svg/Icon'
+import {deleteLog} from '../../api'
 
-function Scorecard() {
+function Scorecard(props) {
+
+    const history = useHistory();
+    const [popup, setPopup] = useState(false);
+
+    const deleteHandler = async (id) =>{
+        await deleteLog(id);
+        history.replace("/logs/log-not-found");
+        history.push("/dashboard");
+        console.log("Log deleted successfully");
+    }
+
     return (
         <div className="scorecard-container">
 
             <header className="scorecard-header">
                 <h3>Scorecard</h3>
+
+                <div className="scorecard-button-container">
+                    <button className="scorecard-button">
+                        <Icon
+                            name="edit"
+                            width="20"
+                            height="20"
+                        />
+                    </button>
+
+                    <button 
+                        className="scorecard-button"
+                        onClick={ () => setPopup(!popup) }
+                    >
+                        <Icon
+                            name="delete"
+                            width="30"
+                            height="30"
+                        />                    
+                    </button>
+                </div>
+                
+
             </header>
 
             <div className="scorecard-body">
@@ -45,6 +82,31 @@ function Scorecard() {
                 </div>
 
             </div> 
+
+            { popup && 
+                <div className="delete-popup-container">
+                    <div className="delete-popup">
+                        <div className="delete-body">
+                            <p>Would you like to delete this current log?</p>
+                        </div>
+                        <div className="delete-buttons-container">
+                            <button 
+                                className="cancel-button"
+                                onClick={ () => setPopup(!popup) }
+                            >
+                                Cancel
+                            </button>
+
+                            <button 
+                                className="delete-button"
+                                onClick={ () => deleteHandler(props.log._id) }
+                            >
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
         </div>
     )
 }

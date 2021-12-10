@@ -1,0 +1,26 @@
+.log-deleted-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(245, 245, 245);
+}
+
+.log-deleted-content{
+    width: 50%;
+    height: 25%;
+}
+
+.log-deleted-content p{
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--color-lg);
+}
+
+.log-placeholder{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+

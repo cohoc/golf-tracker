@@ -10,9 +10,10 @@ function Log() {
     const [log, setLog] = useState([]);
 
     useEffect( ()=> {
-
+        
         const logHandler = async () => {
             const data = await getLog(id);
+            console.log(data);
             setLog(data);
         }
 
@@ -62,7 +63,7 @@ function Log() {
                     </div>
 
                 </header>
-                <Scorecard/>
+                <Scorecard log={log}/>
                 
             </div>
         </div>
