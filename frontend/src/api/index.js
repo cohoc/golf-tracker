@@ -25,3 +25,10 @@ export const getLog = async (id) => {
 
     return(data);
 }
+
+export const deleteLog = async (id) => {
+    let logID = id;
+    await axios.delete(`${url}/${logID}`)
+        .then( res => console.log(res))
+        .catch( error => console.log(error.message))
+}

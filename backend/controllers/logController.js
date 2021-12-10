@@ -41,8 +41,6 @@ export const createLog = async (req, res) => {
 export const deleteLog = async (req, res) => {
     const {id} = req.params;
 
-    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
-
     await GolfLog.findByIdAndRemove(id);
 
     res.json({message: "Log deleted successfully"})
