@@ -9,33 +9,35 @@ const GolfProvider = props => {
     const [par, setPar] = useState();
     const [birdie, setBirdie] = useState();
     const [bogey, setBogey] = useState();
-
-
-    const dataHandler = async () => {
-        const data = await getLogs();
-        setHistory( data );
-        console.log(data)
-        resultHandler(data);
-    }
-
-    const resultHandler = (data) => {
-        let scores = Math.round((data.reduce((total, current) => total = total + current.total, 0)) / data.length)
-        let pars = data.reduce((total,current) => total = total + current.par, 0)
-        let birdies = data.reduce((total,current) => total = total + current.birdie, 0)
-        let bogeys = data.reduce((total,current) => total = total + (current.bogey + current.bogeyex), 0)
-        setScore(scores);
-        setPar(pars);
-        setBirdie(birdies);
-        setBogey(bogeys);
-    }
+    const [rounds, setRounds] = useState(0);
 
     useEffect( () => {
+
+        const dataHandler = async () => {
+            const data = await getLogs();
+            setHistory( data );
+            resultHandler( data );
+        }
+    
+        const resultHandler = (data) => {
+            let scores = Math.round((data.reduce((total, current) => total = total + current.total, 0)) / data.length)
+            let pars = data.reduce((total,current) => total = total + current.par, 0)
+            let birdies = data.reduce((total,current) => total = total + current.birdie, 0)
+            let bogeys = data.reduce((total,current) => total = total + (current.bogey + current.bogeyex), 0)
+            setScore(scores);
+            setPar(pars);
+            setBirdie(birdies);
+            setBogey(bogeys);
+            setRounds( data.length );
+        }
+
         dataHandler()
     }, [])
 
     return(
         <GolfContext.Provider value={{
             history,
+            rounds,
             score,
             par,
             birdie,

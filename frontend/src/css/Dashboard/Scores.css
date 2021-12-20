@@ -11,22 +11,42 @@
     width: 300px;
     height: 150px;
     margin: 1%;
-    padding: 10px;
     background: rgb(255,255,255);
     border: var(--dash-items-border);
-    border-radius: 5px;
+}
+
+.score-title-header{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
 .score-title{
+    padding-left: 1rem;
     color: var(--color-lg);
     font-size: 1.5em;
 }
 
-.item-value{
-    height: 70%;
-    font-size: 3em;
+.item-content{
+    height: 65%;
+    padding-left: 1rem;
+    font-size: 2.75rem;
+    margin-top: 6px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     color: black;
+}
+
+.item-desc{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1rem;
+    margin: 0px 0px 5px 16px;
+    color: var(--color-wgr);
 }

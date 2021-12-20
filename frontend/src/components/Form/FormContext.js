@@ -66,7 +66,7 @@ const FormProvider = props => {
         }
         createLog(log);
         clear();
-        window.location = '/';
+        window.location.reload();
     }
 
     const totalHandler = e => {
@@ -102,12 +102,15 @@ const FormProvider = props => {
     }, [user.par, user.birdie, user.bogey, user.bogeyex])
 
     useEffect( () => {
-        if (user.front < 25 && user.back < 25 && user.total< 25){
+
+        if (Number(user.front) < 25 && Number(user.back) < 25 ){
             setUser(user => ({...user, format: 0}))
         }
-        else if (((user.front > 25 || user.back > 25) && user.total < 25)){
+
+        else if (((Number(user.front) > 25 || Number(user.back) > 25) && (Number(user.total) === Number(user.front) || Number(user.total) === Number(user.back)))){
             setUser(user => ({...user, format: 9}))
         }
+
         else {
             setUser(user => ({...user, format: 18}))
         }
@@ -120,6 +123,15 @@ const FormProvider = props => {
         if( Number(user.front) > 25 && Number(user.back) > 25){
             setUser(user => ({...user, total: (Number(user.front) + Number(user.back))}))
         }
+
+        else if(Number(user.front) > 25 && Number(user.back) < 25){
+            setUser(user => ({...user, total: (Number(user.front) + Number(user.back))}))
+        }
+
+        else if(Number(user.front) < 25 && Number(user.back) > 25){
+            setUser(user => ({...user, total: (Number(user.front) + Number(user.back))}))
+        }
+
         else {
             setUser(user => ({...user, total: 0}));
         }

@@ -13,7 +13,6 @@ function Log() {
         
         const logHandler = async () => {
             const data = await getLog(id);
-            console.log(data);
             setLog(data);
         }
 

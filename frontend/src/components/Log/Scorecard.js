@@ -13,7 +13,6 @@ function Scorecard(props) {
         await deleteLog(id);
         history.replace("/logs/log-not-found");
         history.push("/dashboard");
-        console.log("Log deleted successfully");
     }
 
     return (
@@ -50,7 +49,6 @@ function Scorecard(props) {
                 <div className="scorecard-row hole-row">
                     <ul className="front-row">
                         <li>Hole</li>
-                        <li>0</li>
                         <li>1</li>
                         <li>2</li>
                         <li>3</li>
@@ -66,18 +64,17 @@ function Scorecard(props) {
 
                 <div className="scorecard-row hole-row">
                     <ul className="front-par">
-                        <li>Hole</li>
-                        <li>0</li>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                        <li>6</li>
-                        <li>7</li>
-                        <li>8</li>
-                        <li>9</li>
-                        <li>TOT</li>
+                        <li>Par</li>
+                        <li>-</li>
+                        <li>-</li>
+                        <li>-</li>
+                        <li>-</li>
+                        <li>-</li>
+                        <li>-</li>
+                        <li>-</li>
+                        <li>-</li>
+                        <li>-</li>
+                        <li></li>
                     </ul>
                 </div>
 

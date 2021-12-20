@@ -1,11 +1,10 @@
 .dashboard-container{
     display: flex;
     width: 100%;
-    background: rgb(240,240,240);
 }
 
 .dashboard-content-container{
-    background: rgb(240,240,240);
+    background: rgb(240, 240, 240);
 }
 
 .dashboard-topbar{
