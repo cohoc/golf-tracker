@@ -9,7 +9,7 @@ function GolferHistory() {
     const {history} = useContext(GolfContext)
 
     return (
-        <div className="golfer-history-container">
+        <div className="golfer-history-container items-bs">
             <div className="golfer-history-header">
                 <p>Golf History</p>
             </div>
@@ -25,7 +25,7 @@ function GolferHistory() {
                      
                 {(typeof history != 'undefined') ? (
                     <>
-                        {history.map((log, index) => {
+                        {[...history].reverse().map((log, index) => {
                             return(
                                 <Link to={`/logs/${log._id}`} className="golfer-history-row" key={index}> 
                                     <div>
@@ -52,6 +52,7 @@ function GolferHistory() {
                         })}
                     </>
                 ) : ('')}
+
             </div>
         </div>
     )
